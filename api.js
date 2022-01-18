@@ -1,6 +1,8 @@
 const { request, response } = require('express')
+const cors = require('cors')
 const express = require('express')
 const res = require('express/lib/response')
+app.use(cors({ origin: '*' }));
 const gerenciadorStarWars = require('./controllers/functions')
 const app = express()
 const swapController = require('./controllers/swapi')
