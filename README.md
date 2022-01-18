@@ -16,9 +16,10 @@
 			-	Personagens
 			-	Naves 
 			-	Veículos
+	-	Todas as requisições devem ter o padrão *"/api/"*
 	-	Todas as requisições de ***Listagem*** devem seguir o seguinte padrão:
 		-	```javascript
-			//people
+			//api/people
 			{ 
 				"count": 1,
 				"data": [
@@ -32,7 +33,7 @@
 		-	Onde **count**	representa o total de registros da consulta e **data** são efetivamente os registros contendo sempre o **name** de cada item
 		-	Para a a Consulta de Filmes especificamente, o modelo de cada filme deverá ser:
 		-	```javascript
-			//movies
+			//api/movies
 			{ 
 				"count": 1,
 				"data": [
