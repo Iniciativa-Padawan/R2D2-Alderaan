@@ -1,3 +1,4 @@
+
 # R2D2
 ## Projeto de conclusão do curso
 
@@ -15,6 +16,39 @@
 			-	Personagens
 			-	Naves 
 			-	Veículos
+	-	Todas as requisições de ***Listagem*** devem seguir o seguinte padrão:
+		-	```javascript
+			//people
+			{ 
+				"count": 1,
+				"data": [
+							{
+								"name": "Luke Skywalker"
+							}
+						] 
+			}
+			```
+
+		-	Onde **count**	representa o total de registros da consulta e **data** são efetivamente os registros contendo sempre o **name** de cada item
+		-	Para a a Consulta de Filmes especificamente, o modelo de cada filme deverá ser:
+		-	```javascript
+			//movies
+			{ 
+				"count": 1,
+				"data": [
+							{
+								"name": "A New Hope",
+								"type": "Classic",
+								"sequential": 4
+							}
+						] 
+			}
+			```
+		- Onde **sequential** é a ordem que você considera que o filme deve ser assistido e **type** é a qual trilogia o filme pertence, sendo possíveis:
+			- Classic
+			- Prequel
+			- Sequel
+			- Spin-Off
 	-	Importante que as funções estejam documentadas usando JSDoc
 	-	A API deve estar devidamente publicada no heroku e devidamente testada no [**Portal do Padawan**](https://iniciativapadawan.com.br/Reuniao/ApiStarWars)
 	-	Este repositório deverá estar atualizado com a versão final do código na sua respectiva ramificação
