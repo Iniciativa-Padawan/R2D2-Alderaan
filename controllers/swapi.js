@@ -45,10 +45,4 @@ async function getSpecies(){
     return handlesResult(response.data)
 }
 
-async function getFilms(){
-    let response = await instance.get('films')
-    
-    return handlesResult(response.data)
-}
-
-module.exports = {getPeople, getPlanets, getStarships, getVehicles, getSpecies, getFilms}
+module.exports = {getPeople, getPlanets, getStarships, getVehicles, getSpecies}

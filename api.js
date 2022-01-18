@@ -3,45 +3,39 @@ const express = require('express')
 const res = require('express/lib/response')
 const gerenciadorStarWars = require('./controllers/functions')
 const app = express()
-const swapController = require('./controllers/swap')
+const swapController = require('./controllers/swapi')
 app.use(express.json())
 
-app.get('/swap', async (request,response) => {
+app.get('/api/people', async (request,response) => {
     const apiResponse = await swapController.getPeople()
     response.send(apiResponse)
 })
 
-app.get('/swap/planets', async (request,response) => {
+app.get('/api/planets', async (request,response) => {
     const apiResponse = await swapController.getPlanets()
     response.send(apiResponse)
 })
 
-app.get('/swap/starships', async (request,response) => {
+app.get('/api/spaceships', async (request,response) => {
     const apiResponse = await swapController.getStarships()
     response.send(apiResponse)
 })
 
-app.get('/swap/vehicles', async (request,response) => {
+app.get('/api/vehicles', async (request,response) => {
     const apiResponse = await swapController.getVehicles()
     response.send(apiResponse)
 })
 
-app.get('/swap/species', async (request,response) => {
+app.get('/api/species', async (request,response) => {
     const apiResponse = await swapController.getSpecies()
     response.send(apiResponse)
 })
 
-app.get('/swap/films', async (request,response) => {
-    const apiResponse = await swapController.getFilms()
-    response.send(apiResponse)
-})
-
-
-app.get('/filmes',(req,res) => {
+app.get('/api/movies',(req,res) => {
     res.send(gerenciadorStarWars.listaDeFilmes())
 })
 
-app.get('/filmes/:indice',(req,res) => {
+app.get('/movies/:indice',(req,res) => {
     res.send(gerenciadorStarWars.exibirFilme(req.params.indice))
 })
 
