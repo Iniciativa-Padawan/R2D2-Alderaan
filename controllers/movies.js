@@ -1,0 +1,71 @@
+const  movieList = require('../database/movies')
+
+
+function showMe(index) {
+    if (index != undefined) {
+    return movieList[index]
+    }
+    return movieList
+}
+
+function addMovie(movie){
+    movieList.push(movie)
+}
+
+
+function insertMovie(type, movie){
+    switch (type) {
+      case "begin":
+        insertMovieBegin(movie)        
+        break;
+      case "end":
+        insertMovieEnd(movie)        
+        break;
+      default:
+        console.log("Please choose a correct path")
+        break;
+    }
+}
+
+
+function insertMovieBegin(movie){  
+     movieList.unshift(movie)
+} 
+
+function insertMovieEnd(movie){  
+     movieList.push(movie)
+}
+
+function searchMovie(tag) {  
+    var tagLower = tag.toLowerCase()
+    return movieList.find(movie => movie.name.toLowerCase().includes(tagLower))               
+}
+
+
+
+function cronoMovie() {
+    return movieList.sort((a, b) => a.sequential - b.sequential)
+}
+
+function deleteMovie(index) {
+    movieList.splice(index, 1)
+}
+
+function updateMovie(index, movie) {
+    movieList[index] = movie    
+}
+
+module.exports = {
+    updateMovie,
+    deleteMovie,
+    showMe,
+    insertMovie,
+    insertMovieBegin,
+    insertMovieEnd,
+    searchMovie,
+    addMovie,
+    cronoMovie
+}
+
+
+
