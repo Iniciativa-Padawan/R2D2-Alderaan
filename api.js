@@ -1,8 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 app.use(express.json())
 app.use(cors({ origin: '*' }));
 const movieManager = require('./controllers/movies')
+const swapiAula = require('./controllers/swapi')
 const { response } = require('express')
 
 
