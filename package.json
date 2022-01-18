@@ -4,6 +4,7 @@
   "description": "> Api desenvolvida em NodeJS para consultar e gerenciar informações do universo Star Wars consumindo serviços de terceiros e próprios\r -\tDesenvolver API em NodeJS\r \t-\tRequisições para:\r \t\t-\tFilmes \r \t\t\t-\tLer\r \t\t\t-\tInserir\r \t\t\t-\tAlterar\r \t\t\t-\tDeletar\r \t\t-\tSwapi\r \t\t\t-\tEspécies\r \t\t\t-\tPlanetas\r \t\t\t-\tPersonagens\r \t\t\t-\tNaves \r \t\t\t-\tVeículos\r \t-\tImportante que as funções estejam documentadas usando JSDoc\r \t-\tA API deve estar devidamente publicada no heroku e devidamente testada no [**Portal do Padawan**](https://iniciativapadawan.com.br/Reuniao/ApiStarWars)\r \t-\tEste repositório deverá estar atualizado com a versão final do código na sua respectiva ramificação\r \t-\tData de Entrega: até 24/01",
   "main": "index.js",
   "scripts": {
+    "start":"node api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
