@@ -17,22 +17,16 @@
 			-	Naves 
 			-	Veículos
 	-	Todas as requisições devem ter o padrão *"/api/"*
-		-	movies
-		-	planets
-		-	spaceships
-		-	vehicles
-		-	species
-		-	people	
 	-	Todas as requisições de ***Listagem*** devem seguir o seguinte padrão:
 		-	```javascript
 			//api/people
 			{ 
-				"count": 1,
-				"data": [
-							{
-								"name": "Luke Skywalker"
-							}
-						] 
+			  "count": 1,
+			  "data": [
+						{
+			      		  "name": "Luke Skywalker"
+						}
+					  ] 
 			}
 			```
 
@@ -41,14 +35,14 @@
 		-	```javascript
 			//api/movies
 			{ 
-				"count": 1,
-				"data": [
-							{
-								"name": "A New Hope",
-								"type": "Classic",
-								"sequential": 4
-							}
-						] 
+			  "count": 1,
+			  "data": [
+						{
+						  "name": "A New Hope",
+						  "type": "Classic",
+						  "sequential": 4
+						}
+					  ] 
 			}
 			```
 		- Onde **sequential** é a ordem que você considera que o filme deve ser assistido e **type** é a qual trilogia o filme pertence, sendo possíveis:
