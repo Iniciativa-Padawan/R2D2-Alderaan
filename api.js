@@ -55,4 +55,4 @@ app.delete('/:numero', (req, res) => {
     res.send('Filme foi deletado')
 })
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
