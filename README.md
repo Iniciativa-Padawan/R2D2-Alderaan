@@ -17,6 +17,12 @@
 			-	Naves 
 			-	Veículos
 	-	Todas as requisições devem ter o padrão *"/api/"*
+		-	movies
+		-	planets
+		-	spaceships
+		-	vehicles
+		-	species
+		-	people	
 	-	Todas as requisições de ***Listagem*** devem seguir o seguinte padrão:
 		-	```javascript
 			//api/people
