@@ -5,8 +5,8 @@ app.use(express.json())
 app.use(cors({
   origin: '*'
 }));
-const localController = require('../starwars/controllers/localapi');
-const swapiController = require('../starwars/controllers/swapi');
+const localController = require('./controllers/localapi');
+const swapiController = require('./controllers/swapi');
 
 app.get('/api/movies', (request, response) => {
   let movies =  localController.readMovies()
