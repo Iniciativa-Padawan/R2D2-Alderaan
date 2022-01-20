@@ -29,10 +29,5 @@ var filmes = [
     ]
 
     
-    function listarfilmes () {
-      return filmes
-  }
- 
-  listarfilmes
 
   module.exports = {filmes}
