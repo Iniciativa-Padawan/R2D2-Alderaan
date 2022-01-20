@@ -42,7 +42,7 @@ async function getplanets() {
 
 /*apontar naves*/
 async function getspaceships() {
-    const response = await instance.get('spaceships')
+    const response = await instance.get('starships')
 
     return handleresult (response.data);
 }
