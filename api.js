@@ -37,10 +37,10 @@ app.post(["/:type/:indice", "/:type"], handleInsert)
     }
 
 app.put("/:indice", (request, response) => {
-  let indice = request.params.indice
-  let movie = request.body
-  movieList.editMovies(indice, movie)
-  response.send("Movie Edited!")
+    let indice = request.params.indice
+    let movie = request.body
+    movieList.editMovies(indice, movie)
+    response.send("Movie Edited!")
 })
 
 app.get('/api/people', async (request, response) => {
