@@ -33,28 +33,34 @@ app.get('/api/species', async (request,response) => {
     response.send(apiResponse)
 })
 
-app.get('/api/movies',(req,res) => {
-    res.send(gerenciadorStarWars.listaDeFilmes())
+app.get('/api/movies',(request,response) => {
+    response.send(gerenciadorStarWars.listaDeFilmes())
 })
 
-app.get('/movies/:indice',(req,res) => {
-    res.send(gerenciadorStarWars.exibirFilme(req.params.indice))
+app.get('/movies/:indice',(request,response) => {
+    response.send(gerenciadorStarWars.exibirFilme(request.params.indice))
 })
 
-app.get('/', function (req, res) {
-    res.send('teste')
+app.post(["/:type/:indice", "/:type"], handleInsert)
+    function handleInsert (request, response) {
+        let type = request.params.type
+        let movie = request.body
+        let indice = reques.params.indice
+        gerenciadorStarWars.criarFilme(type, movie, indice)
+        response.send("O filme foi criado!")  
+}
+
+app.put("/:indice", (request, response) => {
+    let indice = request.params.indice
+    let movie = request.body
+    gerenciadorStarWars.atualizarFilme(indice, movie)
+    response.send("O filme foi editado!")
 })
 
-app.post('/', (req, res) => {
-    let filme = req.body
-    gerenciadorStarWars.criarFilme(filme)
-    res.send('Filme criado')
-})
-
-app.delete('/:numero', (req, res) => {
-    let numero = req.params.numero
+app.delete('/:numero', (request, response) => {
+    let numero = request.params.numero
     gerenciadorStarWars.deletarFilme(numero)
-    res.send('Filme foi deletado')
+    response.send('O filme foi deletado!')
 })
 
 app.listen(process.env.PORT || 3000)
