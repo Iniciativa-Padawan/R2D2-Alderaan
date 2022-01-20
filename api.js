@@ -23,13 +23,13 @@ app.get('/:indice', (request, response) => {
   response.send(localController.readMovie(indice))
 })
 
-app.delete('/:indice', (request, response) => {
+app.delete('/api/movies/:indice', (request, response) => {
   let indice = request.params.indice
   localController.deleteMovie(indice)
   response.send('Movie deleted!')
 })
 
-app.post('/', (request, response) => {
+app.post('/api/movies/', (request, response) => {
   let movie = request.body
   localController.createMovie(movie)
   response.send('Movie created!')
