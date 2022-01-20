@@ -2,7 +2,9 @@ const axios = require('axios');
 const instance = axios.create({
   baseURL: 'https://swapi.dev/api/'
 });
-
+/**
+ * @param  {} data
+ */
 function handleResult(data) {
   let count = data.count
   let arrayResults = data.results
