@@ -1,8 +1,10 @@
 
+
 # R2D2
 ## Projeto de conclusão do curso
 
 > Api desenvolvida em NodeJS para consultar e gerenciar informações do universo Star Wars consumindo serviços de terceiros e próprios
+
 -	Desenvolver API em NodeJS
 	-	Requisições para:
 		-	Filmes 
@@ -54,3 +56,10 @@
 	-	A API deve estar devidamente publicada no heroku e devidamente testada no [**Portal do Padawan**](https://iniciativapadawan.com.br/Reuniao/ApiStarWars)
 	-	Este repositório deverá estar atualizado com a versão final do código na sua respectiva ramificação
 	-	Data de Entrega: até 24/01
+
+
+## Desafio Extra
+
+- Transformar esse *Readme* na documentação/manual da sua **API**. Explicando o que cada **rota** faz e quais os parâmetros esperados por cada uma delas
+
+- Transformar a **rota raiz**(rota inicial) da sua **API** em exibição do próprio *Readme*, utilizando o plugin **[express-readme](https://www.npmjs.com/package/express-readme)**, para que quando alguém acesse a **API**, consiga entender como usá-la. 
