@@ -23,15 +23,18 @@ app.get('/:indice', (request, response) => {
 
 app.delete('/:indice', (request, response) => {
   let indice = request.params.indice
-  localController.deleteMovie(indice)
+  localController.deleteMovies(indice)
   response.send('Movie deleted!')
 })
 
-app.post('/', (request, response) => {
-  let movie = request.body
-  localController.createMovie(movie)
-  response.send('Movie created!')
-})
+app.post(["/:type/:indice", "/:type"], handleInsert)
+    function handleInsert (request, response) {
+      let type = request.params.type
+      let movie = request.body
+      let indice = request.params.indice
+      localController.createMovies(type, movie, indice)
+      response.send("Movie Created!")
+    }
 
 app.put('/:indice', (request, response) => {
   let indice = request.params.indice

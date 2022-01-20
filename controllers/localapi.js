@@ -6,8 +6,8 @@ Criação de funções CRUD (Create - get - Update - Delete)
 
 /**
  * Adiciona um filme
- * @param  {string} type - Determina se o filme será inserido no final ou no início da listagem
- * @param  {movie} movie - Filme que vai ser inserido no final da listagem
+ * @param  {string} type - Determina o local em que o filme será inserido na listagem
+ * @param  {movie} movie - Filme que vai ser inserido na listagem
  * @param  {number} index - Determina a posição que será inserido o filme na listagem
  */
  function createMovies(type, movie, index) {
