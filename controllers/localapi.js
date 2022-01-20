@@ -61,7 +61,10 @@ Criação de funções CRUD (Create - get - Update - Delete)
     if (indice != undefined) {
       return movieList [indice]
     }
-    return movieList
+    return movieList.map((item, index) => {
+      item.index = index
+      return item
+    })
   }
 
   /*find
