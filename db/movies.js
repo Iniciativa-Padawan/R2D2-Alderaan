@@ -35,4 +35,4 @@ var filmes = [
  
   listarfilmes
 
-  module.exports = filmes
+  module.exports = {filmes}
