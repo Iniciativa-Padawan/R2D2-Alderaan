@@ -15,7 +15,8 @@ app.get('/api/movies', (request, response) => {
   if (name != undefined) {
     response.send(localController.findMovie(name))
   } else {
-    response.send({data: localController.readMovie()})
+    let filmes = localController.readMovie()
+    response.send({count: filmes.length, data: filmes})
   }
 })
 
