@@ -2,10 +2,7 @@ const movies = require('../db/movies');
 
 //CRUD
 /* 
-  Create
-  Read
-  Update
-  Delete
+  Create, Read, Update e Delete
 */
 
 /* adicionar*/
