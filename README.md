@@ -1,4 +1,5 @@
 
+
 # R2D2
 ## Projeto de conclusão do curso
 
@@ -7,15 +8,24 @@
 	-	Requisições para:
 		-	Filmes 
 			-	Ler
+				- ```GET/api/movies ```
 			-	Inserir
+				- ```POST/api/movies ```
 			-	Alterar
+				-	 ```PUT/api/movies/:index ```
 			-	Deletar
+				-	 ```DELETE/api/movies/:index ```
 		-	Swapi
 			-	Espécies
+				-	```GET/api/species```
 			-	Planetas
+				-	```GET/api/planets```
 			-	Personagens
+				-	```GET/api/people```
 			-	Naves 
+				-	```GET/api/spaceships```
 			-	Veículos
+				-	```GET/api/vehicles```
 	-	Todas as requisições devem ter o padrão *"/api/"*
 	-	Todas as requisições de ***Listagem*** devem seguir o seguinte padrão:
 		-	```javascript
@@ -40,12 +50,13 @@
 						{
 						  "name": "A New Hope",
 						  "type": "Classic",
-						  "sequential": 4
+						  "sequential": 4,
+						  "index": 0
 						}
 					  ] 
 			}
 			```
-		- Onde **sequential** é a ordem que você considera que o filme deve ser assistido e **type** é a qual trilogia o filme pertence, sendo possíveis:
+		- Onde **index** é a posição/índice do filme em sua lista de filmes, **sequential** é a ordem que você considera que o filme deve ser assistido e **type** é a qual trilogia o filme pertence, sendo possíveis:
 			- Classic
 			- Prequel
 			- Sequel
