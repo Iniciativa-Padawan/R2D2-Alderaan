@@ -36,11 +36,11 @@ app.post(["/:type/:indice", "/:type"], handleInsert)
       response.send("Movie Created!")
     }
 
-app.put('/:indice', (request, response) => {
+app.put("/:indice", (request, response) => {
   let indice = request.params.indice
   let movie = request.body
-  localController.updateMovie(indice, movie)
-  response.send('Movie updated!')
+  movieList.editMovies(indice, movie)
+  response.send("Movie Edited!")
 })
 
 app.get('/api/people', async (request, response) => {
