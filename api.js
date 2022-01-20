@@ -5,7 +5,7 @@ app.use(express.json())
 app.use(cors({
   origin: '*'
 }));
-const localController = require('./controllers/movies');
+const localController = require('./controllers/localapi');
 const swapiController = require('./controllers/swapi');
 
 app.get('/api/movies', (request, response) => {
@@ -14,13 +14,13 @@ app.get('/api/movies', (request, response) => {
   if (name != undefined) {
     response.send(localController.findMovie(name))
   } else {
-    response.send({data: localController.readMovies()})
+    response.send({data: localController.readMovie()})
   }
 })
 
 app.get('/:indice', (request, response) => {  
   let indice = request.params.indice
-  response.send(localController.readMovies(indice))
+  response.send(localController.readMovie(indice))
 })
 
 app.delete('/:indice', (request, response) => {

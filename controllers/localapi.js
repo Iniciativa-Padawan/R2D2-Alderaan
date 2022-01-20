@@ -14,11 +14,12 @@ function createMovie(movie) {
 }
 
 /*ler*/
-function readMovies(indice) {
-  if (indice != undefined) {
-    return movies[indice]
-  }
-  return movies
+function readMovie(indice) { 
+  if (indice != undefined) { 
+  return movies [indice] } 
+  return movies.map((item, index) => { 
+  item.index = index 
+  return item }) 
 }
 
 /*localizar*/
@@ -36,4 +37,4 @@ function deleteMovie(indice) {
   movies.splice(indice, 1)
 }
 
-module.exports = { createMovie, readMovies, updateMovie, deleteMovie, findMovie }
+module.exports = { createMovie, readMovie, updateMovie, deleteMovie, findMovie }

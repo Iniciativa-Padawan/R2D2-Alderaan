@@ -1,4 +1,4 @@
-var filmes = [
+const filmes = [
   
     {name: "uma nova esperança",
     sequential: 4, type: "classic"},
@@ -30,4 +30,4 @@ var filmes = [
 
     
 
-  module.exports = {filmes}
+  module.exports = filmes
