@@ -1,30 +1,30 @@
 var filmes = [
   
-    {nome: "uma nova esperança",
+    {name: "uma nova esperança",
     sequential: 4, type: "classic"},
 
-    {nome: "o império contra-ataca",
+    {name: "o império contra-ataca",
     sequential: 5, type: "classic"},
 
-    {nome: "o retorno de jedi",
+    {name: "o retorno de jedi",
     sequential: 6, type: "classic"},
 
-    {nome: "a ameaça fantasma",
+    {name: "a ameaça fantasma",
     sequential: 1, type: "prequel"},
 
-    {nome: "ataque dos clones",
+    {name: "ataque dos clones",
     sequential: 2, type: "prequel"},
 
-    {nome: "a vingança dos sith",
+    {name: "a vingança dos sith",
     sequential: 3, type: "prequel"},
 
-    {nome: "o despertar da força",
+    {name: "o despertar da força",
     sequential: 7, type: "sequel"},
 
-    {nome: "os últimos jedi",
+    {name: "os últimos jedi",
     sequential: 8, type: "sequel"},
 
-    {nome: "a ascenção skywalker",
+    {name: "a ascenção skywalker",
     sequential: 9, type: "sequel"}
     ]
 
@@ -34,3 +34,5 @@ var filmes = [
   }
  
   listarfilmes
+
+  module.exports = filmes
