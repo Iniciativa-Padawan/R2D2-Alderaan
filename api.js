@@ -35,7 +35,7 @@ app.post('/api/movies/', (request, response) => {
   response.send('Movie created!')
 })
 
-app.put('/:indice', (request, response) => {
+app.put('/api/movies/:indice', (request, response) => {
   let indice = request.params.indice
   let movie = request.body
   localController.updateMovie(indice, movie)
