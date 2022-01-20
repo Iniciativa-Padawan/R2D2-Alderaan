@@ -69,5 +69,6 @@
 ## Desafio Extra
 
 - Transformar esse *Readme* na documentação/manual da sua **API**. Explicando o que cada **rota** faz e quais os parâmetros esperados por cada uma delas
+	- Exemplo de como criar um ReadME legal para o seu projeto https://github.com/iuricode/README-template/blob/main/README-repository/iuricode.md
 
 - Transformar a **rota raiz**(rota inicial) da sua **API** em exibição do próprio *Readme*, utilizando o plugin **[express-readme](https://www.npmjs.com/package/express-readme)**, para que quando alguém acesse a **API**, consiga entender como usá-la. 
