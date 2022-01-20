@@ -1,5 +1,10 @@
 const movieList = [
-    {
+  {
+    sequential: 2,
+    name: 'Attack of the clones',
+    type:'Prequel'
+  },
+  {
       sequential: 3,
       name: 'Revenge of the Sith',
       type:'Prequel'
