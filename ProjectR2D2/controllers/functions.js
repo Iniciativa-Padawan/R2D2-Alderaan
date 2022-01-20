@@ -45,7 +45,6 @@ function deleteMovie(index) {
     movies.splice((index)-1, 1)
 }
 
-console.log(readMovie())
 
 module.exports = { createMovieOrder, readMovie, updateMovie, deleteMovie }
 

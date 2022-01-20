@@ -1,6 +1,8 @@
 const express = require("express");
+const cors = require("cors")
 const app = express();
 app.use(express.json());
+app.use(cors({ origin: '*' }));
 const swapiController = require("./controllers/swapi")
 const functionsController = require("./controllers/functions");
 const req = require("express/lib/request");
