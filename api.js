@@ -16,18 +16,18 @@ app.get('/api/movies', (request, response) => {
    })  
 })
 
-app.get('/:indice', (request, response) => {  
+app.get('/api/movies/:indice', (request, response) => {  
   let indice = request.params.indice
   response.send(localController.readMovies(indice))
 })
 
-app.delete('/:indice', (request, response) => {
+app.delete('/api/movies/:indice', (request, response) => {
   let indice = request.params.indice
   localController.deleteMovies(indice)
   response.send('Movie deleted!')
 })
 
-app.post(["/:type/:indice", "/:type"], handleInsert)
+app.post(["/api/movies/:type/:indice", "/api/movies/:type"], handleInsert)
     function handleInsert (request, response) {
       let type = request.params.type
       let movie = request.body
@@ -36,7 +36,7 @@ app.post(["/:type/:indice", "/:type"], handleInsert)
       response.send("Movie Created!")
     }
 
-app.put("/:indice", (request, response) => {
+app.put("/api/movies/:indice", (request, response) => {
     let indice = request.params.indice
     let movie = request.body
     localController.editMovies(indice, movie)
