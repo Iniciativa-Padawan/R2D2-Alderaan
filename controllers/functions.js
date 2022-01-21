@@ -1,32 +1,53 @@
+// Puxando a constante films (que esta no database) para poder usa-la nas funções.
 const films = require('../database/films');
+//Funções em CRUD
+/*
+    CREATE
+    READ
+    UPDATE
+    DELETE  
+*/
 
 /**
- * @param  {film} film - film to be added
+ * CREATE
+ * @param  {} film - filme passado como parâmetro a ser adicionado.
  */
-//Function to add the movie at the beginning of the list
+//Função que vai criar um filme no final da lista.
 function createFilm(film){
-    films.push(films)
+    films.push(film)
 }
 
 /**
-   * @param  {index} index - element that indicates the location in the list
-   */
-
+ * READ
+* @param  {} index - elemento que indica o seu lugar na lista
+*/
+//Função que vai mostrar todos os filmes, ou o filme pelo indice que for chamado.
  function readFilm(index) {
     if (index != undefined) {
-        return films[(index) -1]
+        return films(index)
     } else {
         return films
     }
 }
 
-//function that replaces one film with another
+
+/**
+ * UPDATE
+ * @param  {} index - Indica qual elemento do filme será removido.
+ * @param  {} film - Indica qual filme será colocado.
+ */
+//Função que coloca um filme no lugar de outro (atualiza).
 function updateFilm(index, film) {
         films[index] = film
     
 }
-//function that removes an object
 
+
+/**
+ * DELETE
+ * @param  {} index - Indica o elemento(filme) que vai ser deletado.
+ */
+//Função que deleta um filme.
 function deleteFilm(index){
     films.splice(index,1)
 }   

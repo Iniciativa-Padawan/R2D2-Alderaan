@@ -1,3 +1,4 @@
+//Constante que armazena a lista dos filmes.
 const films = [
     {
       sequential: 2,
@@ -24,4 +25,5 @@ const films = [
         index: 3
       },
 ]
-    module.exports = films
+//Esse módulo permite chamar films em outros lugares.
+module.exports = films
