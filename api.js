@@ -1,10 +1,36 @@
 const express = require("express");
 const app = express();
-const controller = require("./controllers/functions");
+const functionController = require("./controllers/functions");
 const swapiController = require('./controllers/swapi')
 const cors = require('cors')
 app.use(express.json());
 app.use(cors({ origin: '*' }));
+
+
+
+app.get("/api/films", (req, res) => {
+  res.send(functionController.readFilm());
+});
+
+app.post("/api/films", (req, res) => {
+    let film = req.body;
+  functionController.createFilm(film);
+  res.send("Film created!");
+});
+
+app.put("/api/films/:index", (req, res) => {
+    let index = req.params.index
+    let film = req.body
+    functionController.updateFilm(index, film) 
+    res.send("Film Update!!")
+})
+
+
+app.delete("/api/films/:index", (req, res) => {
+    let index = req.params.index;
+  functionController.deleteFilm(index);
+  res.send("The Film was deleted!");
+});
 
 
 app.get('/api/planets', async (req, res) => {
@@ -36,42 +62,6 @@ app.get('/api/species', async (req, res) =>{
     let speRes = await swapiController.getSpecies()
     res.send(speRes)
 })
-
-
-
-app.get("/", (req, res) => {
-  let query = req.query.name;
-  if (query != undefined) {
-    res.send(controller.findMovie(query));
-  } else {
-    res.send(controller.readMovie());
-  }
-});
-
-
-app.get("/api/movie/:index", (req, res) => {
-  let index = req.params.index;
-  res.send(controller.readMovie(index));
-});
-
-app.delete("/:index", (req, res) => {
-  let index = req.params.index;
-  res.send(controller.deleteMovie(index));
-  res.send("The movie was deleted!");
-});
-
-app.post("/", (req, res) => {
-  let movie = req.body;
-  controller.createMovie(movie);
-  res.send("Movie created!");
-});
-
-app.put("/", (req, res) => {
-  let index = req.params.index;
-  let movie = req.body;
-  controller.updateMovie(index, movie);
-  res.send("Movie update!");
-});
 
 app.listen(3000);
 
