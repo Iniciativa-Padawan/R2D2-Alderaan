@@ -3,7 +3,7 @@ const filmes = require("../db/movies")
 function listaDeFilmes() {
     let returnObj = {
         count: filmes.length,
-        data: filmes
+        data: exibirFilme()
     }
     return returnObj
 }
