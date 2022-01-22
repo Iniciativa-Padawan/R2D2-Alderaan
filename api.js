@@ -48,9 +48,9 @@ app.post("/api/movies/", (request, response) => {
 })
 
 app.put("/api/movies/:index", (request, response) => {
-    let indice = request.params.indice
+    let indice = request.params.index
     let movie = request.body
-    gerenciadorStarWars.atualizarFilme(indice, movie)
+    gerenciadorStarWars.atualizarFilme(movie, indice)
     response.send("O filme foi editado!")
 })
 

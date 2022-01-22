@@ -47,6 +47,7 @@ function exibirFilme(indice) {
 }
 
 function atualizarFilme(movie, indice) {
+    console.log(movie, indice)
     filmes[indice] = movie
 }
 
