@@ -50,6 +50,13 @@ app.post(["/:type/:indice", "/:type"], handleInsert)
         response.send("O filme foi criado!")  
 }
 
+app.put("/api/movies/", (request, response) => {
+    let indice = request.params.indice
+    let movie = request.body
+    gerenciadorStarWars.criarFilme(indice, movie)
+    response.send("O filme foi editado!")
+})
+
 app.put("/:indice", (request, response) => {
     let indice = request.params.indice
     let movie = request.body
