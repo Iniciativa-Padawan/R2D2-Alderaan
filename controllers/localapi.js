@@ -107,4 +107,4 @@ Criação de funções CRUD (Create - get - Update - Delete)
     movieList.splice(index, Number.MAX_VALUE)
   }
   
-  module.exports = {createMovies, readMovies, find, editMovies, deleteMovies, deleteAll}
+  module.exports = {createMovies, readMovies, find, editMovies, deleteMovies, deleteAll, createMoviesOrder}

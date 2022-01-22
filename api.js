@@ -9,14 +9,14 @@ const localController = require('./controllers/localapi');
 const swapiController = require('./controllers/swapi');
 
 app.get('/api/movies', (request, response) => {
-  let movies =  localController.readMovies()
-   response.send({
-     count: movies.length,
-     data: movies
-   })  
+  let movies = localController.readMovies()
+  response.send({
+    count: movies.length,
+    data: movies
+  })
 })
 
-app.get('/api/movies/:indice', (request, response) => {  
+app.get('/api/movies/:indice', (request, response) => {
   let indice = request.params.indice
   response.send(localController.readMovies(indice))
 })
@@ -28,19 +28,25 @@ app.delete('/api/movies/:indice', (request, response) => {
 })
 
 app.post(["/api/movies/:type/:indice", "/api/movies/:type"], handleInsert)
-    function handleInsert (request, response) {
-      let type = request.params.type
-      let movie = request.body
-      let indice = request.params.indice
-      localController.createMovies(type, movie, indice)
-      response.send("Movie Created!")
-    }
+function handleInsert(request, response) {
+  let type = request.params.type
+  let movie = request.body
+  let indice = request.params.indice
+  localController.createMovies(type, movie, indice)
+  response.send("Movie Created!")
+}
+
+app.post("/api/movies/", (request, response) => {
+  let movie = request.body
+  localController.createMoviesOrder(movie)
+  response.send("Movie Created!")
+})
 
 app.put("/api/movies/:indice", (request, response) => {
-    let indice = request.params.indice
-    let movie = request.body
-    localController.editMovies(indice, movie)
-    response.send("Movie Edited!")
+  let indice = request.params.indice
+  let movie = request.body
+  localController.editMovies(indice, movie)
+  response.send("Movie Edited!")
 })
 
 app.get('/api/people', async (request, response) => {
