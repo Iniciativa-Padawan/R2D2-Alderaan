@@ -47,14 +47,14 @@ app.post("/api/movies/", (request, response) => {
     response.send("O filme foi criado!")
 })
 
-app.put("api/movies/:index", (request, response) => {
+app.put("/api/movies/:index", (request, response) => {
     let indice = request.params.indice
     let movie = request.body
     gerenciadorStarWars.atualizarFilme(indice, movie)
     response.send("O filme foi editado!")
 })
 
-app.delete('api/movies/:numero', (request, response) => {
+app.delete("/api/movies/:numero", (request, response) => {
     let numero = request.params.numero
     gerenciadorStarWars.deletarFilme(numero)
     response.send('O filme foi deletado!')
