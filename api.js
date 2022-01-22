@@ -50,24 +50,23 @@ app.post(["/:type/:indice", "/:type"], handleInsert)
         response.send("O filme foi criado!")  
 }
 
-app.put("/api/movies/", (request, response) => {
-    let indice = request.params.indice
+app.post("/api/movies/", (request, response) => {
     let movie = request.body
-    gerenciadorStarWars.criarFilme(indice, movie)
-    response.send("O filme foi editado!")
+    gerenciadorStarWars.criarFilmeAntes(movie)
+    response.send("O filme foi criado!")
 })
 
-app.put("/:indice", (request, response) => {
+app.put("api/movies/:index", (request, response) => {
     let indice = request.params.indice
     let movie = request.body
     gerenciadorStarWars.atualizarFilme(indice, movie)
     response.send("O filme foi editado!")
 })
 
-app.delete('/:numero', (request, response) => {
+app.delete('api/movies/:numero', (request, response) => {
     let numero = request.params.numero
     gerenciadorStarWars.deletarFilme(numero)
     response.send('O filme foi deletado!')
 })
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000) 
