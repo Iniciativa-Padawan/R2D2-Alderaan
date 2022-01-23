@@ -39,7 +39,7 @@ function searchMovie(tag) {
 
 
 //listar em ordem crono
-function cronoMovie() {
+function ernstOrder() {
     return movieList.sort((a, b) => a.sequential - b.sequential)
 }
 //deletar
@@ -59,7 +59,7 @@ module.exports = {
     insertMovieBegin,
     insertMovieEnd,
     searchMovie,
-    cronoMovie
+    ernstOrder
 }
 
 

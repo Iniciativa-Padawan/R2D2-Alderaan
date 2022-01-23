@@ -9,8 +9,14 @@ const { response } = require('express')
 
 
 //swapi
-app.get('/api/movies', async (req,res) => {
-    const apiResponse = await swapiManager.getMovies()
+app.get('/api/species', async (req,res) => {
+  const apiResponse = await swapiManager.getSpecies()
+  res.send(apiResponse)
+}
+)
+
+app.get('/api/planets', async (req,res) => {
+    const apiResponse = await swapiManager.getPlanets()
     res.send(apiResponse)
   }
 )
@@ -20,7 +26,6 @@ app.get('/api/people', async (req,res) => {
     res.send(apiResponse)
   }
 )
-  
   
 app.get('/api/spaceships', async (req,res) => {
     const apiResponse = await swapiManager.getSpaceShips()
@@ -33,18 +38,7 @@ app.get('/api/vehicles', async (req,res) => {
     res.send(apiResponse)
   }
 )
-  
-app.get('/api/species', async (req,res) => {
-    const apiResponse = await swapiManager.getSpecies()
-    res.send(apiResponse)
-  }
-)
 
-app.get('/api/planets', async (req,res) => {
-    const apiResponse = await swapiManager.getPlanets()
-    res.send(apiResponse)
-  }
-)
   
 
 
@@ -56,27 +50,26 @@ app.get('/api/movies', (req, res) => {
   }
 )
 
-
-app.get('/SW/search/:index', (req, res) => {
+app.get('/api/search/:index', (req, res) => {
     const parametro = req.params
     res.send(movieManager.showMe(parametro.index))
   }
 )
 
-app.get('/SW/search', (req, res) => {            //procura um filme por um termo
+app.get('/api/search', (req, res) => {            //procura um filme por um termo
     res.send(movieManager.searchMovie(req.query.name))
   }
 )
 
 
-app.get('/SW/crono', (req, res) => {          // ordena a lista pela sequência cronológica
-    movieManager.cronoMovie()
+app.get('/api/order', (req, res) => {          // ordena a lista pela sequência cronológica
+    movieManager.ernstOrder()
     res.send(`List Updated!`)
   }
 )
 
 
-app.post('/SW/:type', (req, res) => {
+app.post('/api/movies/:type', (req, res) => {
     const parametro = req.params
     movieManager.insertMovie(parametro.type,req.body)         //post Adiciona um filme no início ou no fim begin end
     res.send(`The movie has been added!`)
