@@ -9,6 +9,12 @@ const { response } = require('express')
 
 
 //swapi
+app.get('/api/films', async (req,res) => {
+  const apiResponse = await swapiManager.getFilms()
+  res.send(apiResponse)
+}
+)
+
 app.get('/api/species', async (req,res) => {
   const apiResponse = await swapiManager.getSpecies()
   res.send(apiResponse)
