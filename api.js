@@ -1,20 +1,21 @@
 const express = require('express');
 const cors = require('cors')
 const app = express()
-app.use(cors({ origin: '*' }));
-app.use(express.json())
 const movieManager = require('./controllers/movies');
 const swapiManager = require('./controllers/swapi');
 const { response } = require('express');
+app.use(cors({ origin: '*' }));
+app.use(express.json())
 
 
 //swapi
+/*
 app.get('/api/films', async (req,res) => {
   const apiResponse = await swapiManager.getFilms()
   res.send(apiResponse)
 }
 )
-
+*/
 app.get('/api/species', async (req,res) => {
   const apiResponse = await swapiManager.getSpecies()
   res.send(apiResponse)
