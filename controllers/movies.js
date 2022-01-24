@@ -25,12 +25,13 @@ function insertMovie(type, movie){
 
 
 function insertMovieBegin(movie){  
-     movieList.unshift(movie)
+     movieList.data.unshift(movie)
 } 
 
 function insertMovieEnd(movie){  
-     movieList.push(movie)
+     movieList.data.push(movie)
 }
+
 //procurar por tag
 function searchMovie(tag) {  
     var tagLower = tag.toLowerCase()
@@ -40,15 +41,15 @@ function searchMovie(tag) {
 
 //listar em ordem crono
 function ernstOrder() {
-    return movieList.sort((a, b) => a.sequential - b.sequential)
+    return movieList.data.sort((a, b) => a.sequential - b.sequential)
 }
 //deletar
 function deleteMovie(index) {
-    movieList.splice(index, 1)
+    movieList.data.splice(index, 1)
 }
 //altera um filme
 function updateMovie(index, movie) {
-    movieList[index] = movie    
+    movieList.data[index] = movie    
 }
 
 module.exports = {
