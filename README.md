@@ -2,7 +2,7 @@
 
 <center><h3> Projeto de conclusão do curso</h3> </center>
 
-<center>**Version 1.0.0**</center>
+
 
 > Api desenvolvida em NodeJS para consultar e gerenciar informações do universo Star Wars consumindo serviços de terceiros (SWAPI) e próprios.
 
