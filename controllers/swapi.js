@@ -15,7 +15,11 @@ function handleResult(data) {
     return returnObj
 }
 
+async function getMovies(){
+    let response = await instance.get('films')
 
+    return handleResult(response.data)
+}
 
 async function getSpecies(){
     let response = await instance.get('species')
@@ -49,6 +53,7 @@ async function getVehicles(){
 
 
 module.exports = { 
+    getMovies,
     handleResult,
     getPeople,
     getSpaceShips,

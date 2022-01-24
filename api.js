@@ -8,6 +8,10 @@ app.use(express.json())
 
 
 //swapi
+app.get('/api/movies', async (req,res) => {
+  const apiResponse = await swapiAula.getMovies()
+  res.send(apiResponse)
+})
 
 app.get('/api/species', async (req,res) => {
   const apiResponse = await swapiManager.getSpecies()
