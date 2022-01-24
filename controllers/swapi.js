@@ -3,7 +3,7 @@ const instance = axios.create(
     {
         baseURL: 'https://swapi.dev/api/'
     }
-)
+);
 
 function handleResult(data) {
     let count = data.count
