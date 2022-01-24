@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors')
-const { response } = require('express');
 const app = express()
 const movieManager = require('./controllers/movies');
 const swapiManager = require('./controllers/swapi');
@@ -9,11 +8,6 @@ app.use(express.json())
 
 
 //swapi
-app.get('/api/films', async (req,res) => {
-  const apiResponse = await swapiManager.getFilms()
-  res.send(apiResponse)
-}
-)
 
 app.get('/api/species', async (req,res) => {
   const apiResponse = await swapiManager.getSpecies()
