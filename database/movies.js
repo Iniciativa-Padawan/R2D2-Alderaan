@@ -35,10 +35,10 @@ const movieList =
                         },
 
                         {
-                    "name": "Atack of The Clones",
-                    "year": 2002,
+                    "name": "The Phantom Menace",
+                    "year": 1999,
                     "type": "Prequel",
-                    "sequential": 4,
+                    "sequential": 3,
                     "index": 4
                         },
 
