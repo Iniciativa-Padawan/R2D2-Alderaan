@@ -9,31 +9,31 @@ app.use(express.json())
 
 
 //swapi
-app.get('GET/api/films', async (req,res) => {
+app.get('/api/films', async (req,res) => {
   const apiResponse = await swapiManager.getFilms()
   res.send(apiResponse)
 }
 )
 
-app.get('GET/api/species', async (req,res) => {
+app.get('/api/species', async (req,res) => {
   const apiResponse = await swapiManager.getSpecies()
   res.send(apiResponse)
 }
 )
 
-app.get('GET/api/planets', async (req,res) => {
+app.get('/api/planets', async (req,res) => {
     const apiResponse = await swapiManager.getPlanets()
     res.send(apiResponse)
   }
 )
 
-app.get('GET/api/people', async (req,res) => {
+app.get('/api/people', async (req,res) => {
     const apiResponse = await swapiManager.getPeople()
     res.send(apiResponse)
   }
 )
   
-app.get('GET/api/spaceships', async (req,res) => {
+app.get('/api/spaceships', async (req,res) => {
     const apiResponse = await swapiManager.getSpaceShips()
     res.send(apiResponse)
   }
