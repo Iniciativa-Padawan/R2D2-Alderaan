@@ -10,7 +10,7 @@ function handleResult(data) {
     let arrayResults = data.results
     let returnObj = {
         count: count,
-        results: arrayResults.map(item => { return { name: item.name || item.title }})
+        data: arrayResults.map(item => { return { name: item.name || item.title }})
     }
     return returnObj
 }
