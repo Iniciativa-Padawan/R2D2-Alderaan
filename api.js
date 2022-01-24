@@ -6,6 +6,7 @@ app.use(cors({ origin: '*' }));
 const swapiController = require("./controllers/swapi")
 const functionsController = require("./controllers/functions");
 const req = require("express/lib/request");
+const movies = require("./db/atributes");
 
 /**
  * Requisição para ler todos os filmes da lista
@@ -15,7 +16,12 @@ const req = require("express/lib/request");
  */
 
 app.get("/api/movies", (req, res) => {
-    res.send(functionsController.readMovie()) //Chamada da Função readMovies[lerFilmes] do modulo functions.js
+    let name = req.query.name
+    if(name != undefined){
+        res.send(functionsController.readMovie(name))
+    } else {
+        res.send({count: movies.length, data: movies}) //Chamada da Função readMovies[lerFilmes] do modulo functions.js
+    }
 })
 
 /**

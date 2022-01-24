@@ -1,3 +1,4 @@
+const { type } = require("express/lib/response")
 const movies = require("../db/atributes")
 //CRUD FUNCTIONS
 /*
@@ -22,9 +23,10 @@ function createMovieOrder(movie) {
  */
 function readMovie(index) {
     if (index != undefined) {
-        return movies[(index) - 1]
+        return movies[index]
     } else {
         return movies
+
     }
 }
 /**
@@ -42,7 +44,7 @@ function updateMovie(index, movie) {
  * @param  {Number} index - Posição do filme que vai ser removido
  */
 function deleteMovie(index) {
-    movies.splice((index)-1, 1)
+    movies.splice(index, 1)
 }
 
 
