@@ -19,17 +19,20 @@ function createFilm(film){
 
 /**
  * READ
-* @param  {} index - elemento que indica o seu lugar na lista
+* @param  {} index - elemento que indica o seu lugar na lista.
 */
 //Função que vai mostrar todos os filmes, ou o filme pelo indice que for chamado.
  function readFilm(index) {
     if (index != undefined) {
-        return films(index)
+        return films[index]
     } else {
         return films
     }
 }
-
+//Função que vai localizar o filme.
+function findFilm(name) {
+    return films.find(film => film.name.toLowerCase().includes(name.toLowerCase()))
+  }
 
 /**
  * UPDATE
@@ -52,4 +55,4 @@ function deleteFilm(index){
     films.splice(index,1)
 }   
 
-module.exports = {createFilm, readFilm, updateFilm, deleteFilm}
+module.exports = {createFilm, readFilm, findFilm, updateFilm, deleteFilm}

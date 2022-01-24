@@ -5,6 +5,19 @@ const swapiController = require('./controllers/swapi')
 const cors = require('cors')
 app.use(express.json());
 app.use(cors({ origin: '*' }));
+const req = require("express/lib/request");
+
+
+app.get('/api/movies', (req, res) => {
+    let name = request.query.name
+  
+    if (name != undefined) {
+      response.send(localController.findFilm(name))
+    } else {
+      let filmes = functionController.readFilm()
+      response.send({count: filmes.length, data: filmes})
+    }
+  })
 
 
 //Solicita a leitura dos filmes, para que assim sejam mostrados.
@@ -52,7 +65,6 @@ app.get('/api/vehicles', async (req, res) => {
 })
 //Puxa e mostra os personagens chamando a função.
 app.get('/api/people', async (req, res) => {
-    
     let apiRes = await swapiController.getPeople()
     res.send(apiRes)
 
@@ -62,6 +74,8 @@ app.get('/api/species', async (req, res) =>{
     let speRes = await swapiController.getSpecies()
     res.send(speRes)
 })
+
+
 
 app.listen(3000);
 

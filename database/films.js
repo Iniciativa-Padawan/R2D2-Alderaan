@@ -1,6 +1,8 @@
+
 //Constante que armazena a lista dos filmes.
 const films = [
-    {
+  
+        {
       sequential: 2,
       name: 'Attack of the Clones',
       type:'Prequel',
@@ -25,5 +27,6 @@ const films = [
         index: 3
       },
 ]
+
 //Esse módulo permite chamar films em outros lugares.
 module.exports = films
