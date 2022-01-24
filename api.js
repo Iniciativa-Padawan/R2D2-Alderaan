@@ -8,7 +8,7 @@ app.use(express.json())
 
 
 //swapi
-app.get('/api/movies', async (req,res) => {
+app.get('/api/films', async (req,res) => {
   const apiResponse = await swapiAula.getMovies()
   res.send(apiResponse)
 })
