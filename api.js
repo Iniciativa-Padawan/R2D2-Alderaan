@@ -39,7 +39,7 @@ app.get('GET/api/spaceships', async (req,res) => {
   }
 )
   
-app.get('GET/api/vehicles', async (req,res) => {
+app.get('/api/vehicles', async (req,res) => {
     const apiResponse = await swapiManager.getVehicles()
     res.send(apiResponse)
   }
