@@ -1,6 +1,10 @@
 const  movieList = require('../database/movies')
 
-//ler
+/**
+ * Lista todos os filmes ou apenas 1 pelo índice
+ * @param {number} index - indica a posição do filme escolhido para ser mostrado 
+ * @returns - todos os filmes ou apenas 1
+ */
 function showMe(index) {
     if (index != undefined) {
     return movieList[index]
@@ -8,7 +12,11 @@ function showMe(index) {
     return movieList
 }
 
-//inserir
+/**
+ * 
+ * @param {string} type - "begin" - para add um filme ao início da lista, ou "end" para add ao fim da mesma 
+ * @param {*} movie - filme a ser inserido a lista
+ */
 function insertMovie(type, movie){
     switch (type) {
       case "begin":
@@ -23,31 +31,51 @@ function insertMovie(type, movie){
     }
 }
 
-
+/**
+ * Adiciona filme ao início do filme
+ * @param {*} movie - filme a ser inserido
+ */
 function insertMovieBegin(movie){  
      movieList.data.unshift(movie)
 } 
-
+/**
+ * Adiciona filme ao fim da lista
+ * @param {*} movie - filme a ser inserido
+ */
 function insertMovieEnd(movie){  
      movieList.data.push(movie)
 }
 
-//procurar por tag
+/**
+ * Busca filme por tag
+ * @param {*} tag - Título ou trecho do título a ser utilizado na pesquisa 
+ * @returns - Primeiro título referente a tag
+ */
 function searchMovie(tag) {  
     var tagLower = tag.toLowerCase()
     return movieList.find(movie => movie.name.toLowerCase().includes(tagLower))               
 }
 
 
-//listar em ordem crono
+/**
+ * Retorna a lista na ordem de Ernst
+ * @returns - movieList na ordem de Ernst
+ */
 function ernstOrder() {
     return movieList.data.sort((a, b) => a.sequential - b.sequential)
 }
-//deletar
+/**
+ * Deleta um filme da lista pelo seu índice
+ * @param {*} index - Índice referente ao filme a ser deletado 
+ */
 function deleteMovie(index) {
     movieList.data.splice(index, 1)
 }
-//altera um filme
+/**
+ * Altera/atualiza um filme da lista
+ * @param {*} index - Índice referente ao filme a ser alterado 
+ * @param {*} movie - Novo filme, ou alteração
+ */
 function updateMovie(index, movie) {
     movieList.data[index] = movie    
 }
