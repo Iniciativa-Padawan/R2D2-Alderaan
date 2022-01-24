@@ -18,16 +18,16 @@
 	
 		-	Requisições para:
 			-	Filmes 
-				-	Ler
-				-	Inserir
-				-	Alterar
-				-   Deletar
+				-	Ler '/api/movies'
+				-	Inserir '/api/movies/:type'
+				-	Alterar '/api/movies/:type'
+				- Deletar '/api/movies/:type'
 			-	Swapi
-				-	Espécies
-				-	Planetas
-				-	Personagens
-				-	Naves 
-				-	Veículos
+				-	Espécies '/api/species'
+				-	Planetas '/api/planets'
+				-	Personagens '/api/people'
+				-	Naves '/api/spaceships'
+				-	Veículos '/api/vehicles'
 
 ## 🤝 Contribuintes
 
