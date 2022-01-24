@@ -6,16 +6,15 @@ const cors = require('cors')
 app.use(express.json());
 app.use(cors({ origin: '*' }));
 const req = require("express/lib/request");
-
+const films = require('./database/films');
 
 app.get('/api/movies', (req, res) => {
-    let name = request.query.name
+    let name = req.query.name
   
     if (name != undefined) {
-      response.send(localController.findFilm(name))
+      res.send(localController.findFilm(name))
     } else {
-      let filmes = functionController.readFilm()
-      response.send({count: filmes.length, data: filmes})
+      res.send({count: films.length, data: films})
     }
   })
 
