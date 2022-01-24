@@ -74,8 +74,15 @@ app.get('/api/order', (req, res) => {          // ordena a lista pela sequência
 
 
 app.post('/api/movies/:type', (req, res) => {
-    const parametro = req.params
-    movieManager.insertMovie(parametro.type , req.body)         //post Adiciona um filme no início ou no fim begin end
+  const parametro = req.params
+  movieManager.insertMovie(parametro.type,req.body)         //post Adiciona um filme no início ou no fim begin end
+  res.send(`The movie has been added!`)
+}
+)
+
+app.post('/api/movies', (req, res) => {
+    const movie = req.body
+    movieManager.insertMovieEnd(movie)         //post Adiciona um filme no início ou no fim begin end
     res.send(`The movie has been added!`)
   }
 )
