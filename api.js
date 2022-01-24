@@ -1,46 +1,45 @@
 const express = require('express');
 const cors = require('cors')
+const { response } = require('express');
 const app = express()
 const movieManager = require('./controllers/movies');
 const swapiManager = require('./controllers/swapi');
-const { response } = require('express');
 app.use(cors({ origin: '*' }));
 app.use(express.json())
 
 
 //swapi
-/*
-app.get('/api/films', async (req,res) => {
+app.get('GET/api/films', async (req,res) => {
   const apiResponse = await swapiManager.getFilms()
   res.send(apiResponse)
 }
 )
-*/
-app.get('/api/species', async (req,res) => {
+
+app.get('GET/api/species', async (req,res) => {
   const apiResponse = await swapiManager.getSpecies()
   res.send(apiResponse)
 }
 )
 
-app.get('/api/planets', async (req,res) => {
+app.get('GET/api/planets', async (req,res) => {
     const apiResponse = await swapiManager.getPlanets()
     res.send(apiResponse)
   }
 )
 
-app.get('/api/people', async (req,res) => {
+app.get('GET/api/people', async (req,res) => {
     const apiResponse = await swapiManager.getPeople()
     res.send(apiResponse)
   }
 )
   
-app.get('/api/spaceships', async (req,res) => {
+app.get('GET/api/spaceships', async (req,res) => {
     const apiResponse = await swapiManager.getSpaceShips()
     res.send(apiResponse)
   }
 )
   
-app.get('/api/vehicles', async (req,res) => {
+app.get('GET/api/vehicles', async (req,res) => {
     const apiResponse = await swapiManager.getVehicles()
     res.send(apiResponse)
   }
