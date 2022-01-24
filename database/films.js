@@ -1,6 +1,6 @@
 
 //Constante que armazena a lista dos filmes.
-const films = [
+const films= [
   
         {
       sequential: 2,

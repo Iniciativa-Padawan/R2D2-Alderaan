@@ -21,17 +21,17 @@ app.get('/api/movies', (req, res) => {
 
 
 //Solicita a leitura dos filmes, para que assim sejam mostrados.
-app.get("/api/films", (req, res) => {
+app.get("/api/movies", (req, res) => {
   res.send(functionController.readFilm());
 });
 //Realiza uma mudança nos filmes, nesse caso criando novos.
-app.post("/api/films", (req, res) => {
+app.post("/api/movies", (req, res) => {
     let film = req.body;
   functionController.createFilm(film);
   res.send("Film created!");
 });
 //Faz a substituição dos filmes de acordo com a requisição(req).
-app.put("/api/films/:index", (req, res) => {
+app.put("/api/movies/:index", (req, res) => {
     let index = req.params.index
     let film = req.body
     functionController.updateFilm(index, film) 
@@ -39,7 +39,7 @@ app.put("/api/films/:index", (req, res) => {
 })
 
 //Remove o filme indicado pelo "index".
-app.delete("/api/films/:index", (req, res) => {
+app.delete("/api/movies/:index", (req, res) => {
     let index = req.params.index;
   functionController.deleteFilm(index);
   res.send("The Film was deleted!");
