@@ -5,6 +5,7 @@ const movieManager = require('./controllers/movies');
 const swapiManager = require('./controllers/swapi');
 app.use(cors({ origin: '*' }));
 app.use(express.json())
+require('express-readme')(app);
 
 
 //swapi

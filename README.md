@@ -1,18 +1,21 @@
-# R2D2 - Uma API Star Wars
-## Projeto de conclusão do curso
+<center><h1> R2D2 - Uma API Star Wars</h1> </center>
+
+<center><h3> Projeto de conclusão do curso</h3> </center>
+
+<center>**Version 1.0.0**</center>
+
+> Api desenvolvida em NodeJS para consultar e gerenciar informações do universo Star Wars consumindo serviços de terceiros (SWAPI) e próprios.
 
 
-> Api desenvolvida em NodeJS para consultar e gerenciar informações do universo Star Wars consumindo serviços de terceiros e próprios.
-
-**Version 1.0.0**
 
 ## 💻 Pré-requisitos e contribuição para o R2D2
 
 	* Instale o node.js
 	* Certifique-se de instalar as dependências express, axios, cors e dotenv;
 	* Rode npm install e npm start em seu console;
-	* Para acessar as seguintes requisições, acesse localmente http://localhost:3000 ou faça deploy diretamente destar ramificação no Heroku
-	app.
+	* Para acessar as seguintes requisições, rode o api.js através do node ou nodemon e acesse localmente
+	http://localhost:3000 ou faça deploy diretamente desta ramificação no Heroku app.
+	
 		-	Requisições para:
 			-	Filmes 
 				-	Ler
