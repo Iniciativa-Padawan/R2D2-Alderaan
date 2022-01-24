@@ -35,6 +35,14 @@ const movieList =
                         },
 
                         {
+                    "name": "Atack of The Clones",
+                    "year": 2002,
+                    "type": "Prequel",
+                    "sequential": 4,
+                    "index": 4
+                        },
+
+                        {
                     "name": "Revenge of The Sith",
                     "year": 2005,
                     "type": "Prequel",
