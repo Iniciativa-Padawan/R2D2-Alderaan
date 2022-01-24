@@ -1,6 +1,6 @@
 const movieList = [
     {
-        "count": 1,
+    "count": 11,
         "data": [
                         {
                     "name": "A New Hope",
@@ -13,7 +13,6 @@ const movieList = [
 },
 
     {
-        "count": 2,
         "data": [
                         {
                     "name": "The Empire Strikes Back",
@@ -26,7 +25,6 @@ const movieList = [
 },                 
 
     {
-        "count": 3,
         "data": [
                         {
                     "name": "Return of The Jedi",
@@ -39,7 +37,6 @@ const movieList = [
 },
 
     {
-        "count": 4,
         "data": [
                         {
                     "name": "The Phantom Menace",
@@ -52,7 +49,6 @@ const movieList = [
 },
 
     {
-        "count": 5,
         "data": [
                         {
                     "name": "Atack of The Clones",
@@ -78,7 +74,6 @@ const movieList = [
 },
 
     {
-        "count": 7,
         "data": [
                         {
                     "name": "The Force Awakens",
@@ -91,7 +86,6 @@ const movieList = [
 },
 
     {
-        "count": 8,
         "data": [
                         {
                     "name": "The Last Jedi",
@@ -104,7 +98,6 @@ const movieList = [
 },
 
     {
-        "count": 9,
         "data": [
                         {
                     "name": "The Rise of Skywalker",
@@ -117,7 +110,7 @@ const movieList = [
 },
     
     {
-        "count": 10,
+
         "data": [
                         {
                     "name": "Rogue One",
@@ -130,7 +123,7 @@ const movieList = [
 },
     
     {
-        "count": 11,
+
         "data": [
                         {
                     "name": "Han Solo",
@@ -143,7 +136,6 @@ const movieList = [
 },
 
 ]
-
     
 
 module.exports =  movieList 
